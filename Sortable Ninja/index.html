@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sortable Ninja</title>
+    <meta name="description" content="Sortable Ninja using jQuery UI">
+    <!-- Patrick Aviel Peralta -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $( function() {
+             $( "#container" ).children().draggable({
+            containment : "#container"
+         });
+        });
+
+        $( function() {
+          $( "#accordion" ).accordion();
+          $( document ).tooltip();
+        } );
+
+        </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lekton&display=swap');
+        *{
+            font-family: 'Lekton', sans-serif;
+        }
+        .main-container{
+            width:50%;
+            margin:0 auto;
+        }
+        h1{
+            text-align: center;
+        }
+        .container{
+            width:50%;
+            margin:0 auto;
+        }
+        #container{
+            margin:auto;
+            width:500px;
+            height:300px;
+            text-align:center;
+            padding:20px;
+        }
+        img{
+            margin:0;
+            width:200px;
+            display:block;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="main-container">
+        <h1>Sortable Ninja</h1>
+        <div id="container" class="ui-widget-content">
+            <img src="sorting_images/sort5.png" alt="">
+            <img src="sorting_images/sort2.png" alt="">
+            <img src="sorting_images/sort1.png" alt="">
+            <img src="sorting_images/sort4.png" alt="">
+            <img src="sorting_images/sort3.png" alt="">
+        </div>
+        <p>Drag the image tile to its right position.</p>
+    </div>
+</body>
+</html>
