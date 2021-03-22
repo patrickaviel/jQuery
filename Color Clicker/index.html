@@ -19,10 +19,9 @@
                 // alert(random_color());  
                 var color=random_color();
                 var color_two=random_color();
-         //comment this out when you have figured out what event.stopPropagation is used for
+                //comment this out when you have figured out what event.stopPropagation is used for
                 $(this).children().css("background-color",color);
                 $(this).css("background-color",color_two);
-                
                 event.stopPropagation();
              })
              $('.side_box').click(function(event){
