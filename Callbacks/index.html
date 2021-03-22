@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        function setAlert(){
+            $('h3').click(function(){
+                alert("Clicked me!");
+            });
+        }
+        $(document).ready(function(){
+            setAlert();
+            $('.duplicate').click(function(){
+                $('.internal').append("<h3>Hello</h3>");
+                setAlert();
+            });
+
+            $('form').submit(function(){
+                console.log($(this).serialize());
+                alert("You clicked submit button");
+                return false
+            });
+
+            $('#btnSubmit').click(function(){
+                $('form').submit();
+            });
+
+        });
+        
+    </script>
+
+</head>
+<body>
+    <div class="main-container">
+        <h1>Callbacks</h1>
+        <h3>Sample</h3>
+        <button class="duplicate">Click me!</button>
+        <div class="internal"></div>
+        <div class="for-form">
+            <h2>Sample Form</h2>
+            <form action="process.php" method="post">
+                Full Name: <input type="text" name="fname" id="fname">
+                Email: <input type="text" name="email" id="email">
+                <input class="button"type="submit" value="Submit" id ="submit">
+            </form>
+            <button id="btnSubmit">Another type of submit.</button>
+        </div>
+    </div>
+</body>
+</html>
