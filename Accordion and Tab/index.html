@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion and Tab</title>
+    <meta name="description" content="Accordion and Tab in jQuery">
+    <meta name="author" content="Patrick Peralta">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        $( function() {
+            $('#accordion-1').accordion({
+                collapsible: true
+            });
+            $('#accordion-2').accordion();
+            $( document ).tooltip();
+            $("#tabs-1").tabs();
+
+            var availableTutorials  =  [
+               "HTML",
+               "JavaScript",
+               "Java",
+               "C++",
+            ];
+            $( "#automplete-1" ).autocomplete({
+               source: availableTutorials
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <h1>Accordion and Tab</h1>
+        <h2 title="https://jqueryui.com/">jQuery UI</h2>
+        <h3>Autocomplete jQuery UI</h3>
+        <label for = "automplete-1">Favorite Language:</label><input id = "automplete-1">
+        <h3>This is a sample of Collapsible Accordion</h3>
+
+        <div id = "accordion-1">
+            <h3>Lorem Ipsum</h3>
+            <div>
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore magna 
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+               </p>
+            </div>
+
+            <h3>Bacon Ipsum</h3>
+            <div>
+               <p>
+                Cow pig chicken filet mignon tri-tip rump pork belly jerky picanha fatback venison pork loin. 
+                Beef ribs doner picanha corned beef strip steak ham hock beef filet mignon cupim. Venison 
+                shoulder pork loin biltong drumstick short loin flank pig pork buffalo beef ham boudin strip steak. 
+                Tenderloin picanha tri-tip, drumstick pork leberkas ball tip sirloin landjaeger short ribs.
+               </p>
+            </div>
+        </div>
+
+        <h3>This is a sample of not collapsible Accordion</h3>
+
+        <div id = "accordion-2">
+            <h3>Lorem Ipsum</h3>
+            <div>
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore magna 
+                  aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+               </p>
+            </div>
+
+            <h3>Gangsta Ipsum</h3>
+            <div>
+               <p>
+                Bow wow wow bling bling ligula. Mah nizzle porta commodo tellizzle. 
+                Crackalackin sizzle, sapien izzle vulputate hendrerizzle, libero urna 
+                izzle phat, yo fo shizzle mah nizzle fo rizzle, mah home g-dizzle nunc 
+                sapizzle doggy nunc. Pot eu brizzle. Vestibulizzle fo shizzle felizzle. 
+                Sizzle elementum go to hizzle erizzle. Integer nulla break yo neck, yall, 
+                volutpizzle id, volutpat check out this, shizzlin dizzle egizzle, shut the 
+                shizzle up. pharetra. Sheezy nisi. Curabitur black amizzle leo things ante 
+                blandit fizzle. Dawg laorizzle own yo' owned sure stuff. Bow wow wow uhuh ... yih! 
+                fo shizzle mah nizzle fo rizzle, mah home g-dizzle felis.
+               </p>
+            </div>
+        </div>
+
+
+        <h3>This is a sample of jQuery UI Tab</h3>
+
+        <div id = "tabs-1">
+            <ul>
+               <li><a href = "#tabs-2">Lorem Ipsum</a></li>
+               <li><a href = "#tabs-3">Samuel Ipsum</a></li>
+               <li><a href = "#tabs-4">Classic Ipsum</a></li>
+            </ul>
+            <div id = "tabs-2">
+               <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                nisi ut aliquip ex ea commodo consequat.
+               </p>
+            </div>
+            <div id = "tabs-3">
+               <p>
+                Now that there is the Tec-9, a crappy spray gun from South Miami. 
+                This gun is advertised as the most popular gun in American crime. 
+                Do you believe that shit? It actually says that in the little book 
+                that comes with it: the most popular gun in American crime. 
+                Like they're actually proud of that shit. 
+               </p>
+            </div>
+            <div id = "tabs-4">
+               <p>
+                Normally, both your asses would be dead as fucking fried chicken, 
+                but you happen to pull this shit while I'm in a transitional period 
+                so I don't wanna kill you, I wanna help you. But I can't give you this 
+                case, it don't belong to me. Besides, I've already been through too much shit this 
+                morning over this case to hand it over to your dumb ass.
+               </p>	
+               <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                  nisi ut aliquip ex ea commodo consequat.
+               </p>
+            </div>
+         </div>
+
+    </div>
+</body>
+</html>
