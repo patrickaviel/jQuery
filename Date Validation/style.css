@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Lekton&display=swap');
+*{
+    font-family: 'Lekton', sans-serif;
+}
+body{
+    background-color:#f2f2f2;
+}
+.main-container{
+    text-align: left;
+    margin:auto;
+    width:50%;
+    padding:20px;
+    background-image: url('https://media.giphy.com/media/g0yCDwwBxLJyFd9RYB/giphy.gif');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 200px;
+    border:1px solid black;
+}
+.main-container h1{
+    text-align:center;
+}
+.main-container p{
+    font-size:20px;
+}
+input{
+    display:block;
+    width:50%;
+
+}
+input[type='submit']{
+    width:30%;
+    display:block;
+    margin: 50px auto;
+}
+span{
+    opacity:0;
+    color:red;
+    display:block;
+    text-align: center;
+}

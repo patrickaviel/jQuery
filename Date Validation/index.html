@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Validation</title>
+    <meta name="description" content="Accordion and Tab in jQuery">
+    <meta name="author" content="Patrick Peralta">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        $(function(){
+            $('#datepicker-1').datepicker();
+            $('#datepicker-2').datepicker();
+        });
+
+        $(document).ready(function(){
+            $('form').submit(function(){
+                if(($("#name").val()=="")||($("#datepicker-1").val()=="")||($("#datepicker-2").val()=="")){
+                    $('span').css("opacity","1");
+                    return false;
+                }else{
+                    var name = $('#name').val();
+                    var from = $('#datepicker-1').val();
+                    var to = $('#datepicker-2').val();
+                    alert("Thanks "+ name + "! Your Cruise leaves on " + from + " and returns on " + to + "!");
+                    return false;
+                }
+                
+            });
+        });
+       
+
+    </script>
+
+</head>
+<body>
+    <div class="main-container">
+        <h1>Welcome to the Codingdojo plan-a-Cruise!</h1>
+        <div id = "dialog-4" title = "Dialog Title goes here...">This my first jQuery UI Dialog!</div>
+        <form action="process.php"method="post">
+            <p>From:</p>
+            <input type="text" id="datepicker-1">
+            <p>To:</p>
+            <input type="text" id="datepicker-2">
+            <p>Name:</p>
+            <input type="text" id="name">
+            <input class="ui-button ui-widget ui-corner-all" type="submit" value="Check Dates!" id="btnSubmit">
+            <span>Please fill up the fields!</span>
+            
+        </form>
+
+    </div>
+</body>
+</html>
