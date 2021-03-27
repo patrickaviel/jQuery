@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="jquery.sticky.js"></script>
+
+    <script src="rtop.videoPlayer.1.0.2.min.js"></script>
+    <link rel="stylesheet" href="rtop.videoPlayer.1.0.2.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"crossorigin="anonymous"/>
+    
+    <link rel="stylesheet" href="style.css">
+    <script>
+    $(document).ready(function(){
+        $("h1").sticky({topSpacing:10});
+        $("#my_video").RTOP_VideoPlayer({
+            autoPlay:true,
+            showTimer:true,
+            showSoundControl:true
+        });
+
+    });
+   
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <h1>jQuery Plugins</h1>
+        <div class="sticky">
+            <h3>STICKY</h3>
+
+            Sticky is a jQuery plugin that gives you the ability to
+            make any element on your page always stay visible.
+        </div>
+        <div class="rtop_videoplayer">
+            <h3>RTO+P Video Player</h3>
+
+            jQuery Plugin to play HTML5 video across all browsers.
+            <!-- HTML5 VIDEO TAG -->
+            <div id="my_video">
+                <video src="videos/video.mp4" type="video/mp4" poster="poster.jpg" playsinline>
+                    <source src="videos/video.mp4" type="video/mp4">
+                </video>    
+            </div>
+            
+            <!-- LAZY LOAD (preferred way for quicker page load)-->
+            <div id="my_video" data-video="videos/video.mp4" data-type="video/mp4" data-poster="sample.jpg">    
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
